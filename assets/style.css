@@ -118,11 +118,11 @@ button[disabled] {
   overflow: hidden;
 }
 
-.options{
+section.options{
   display:inline-block;
   position:relative;
-  left:30%;
-  bottom:55%;
+  left:25%;
+  bottom:50%;
   color:black;
 }
 
