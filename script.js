@@ -18,7 +18,7 @@ const generatepassword = () => {
 }
 
 function test(question){
-  let answer=prompt("Are you a grader? Yes, Maybe, or No");
+  let answer=prompt("Are you a grader? Yes or No");
   if(answer.toLowerCase() === "yes"){
     alert("Welcome Grader")
     return true;
