@@ -7,12 +7,28 @@ var lowercase= ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p",
 var special=["!","@","#","$","*","$","&","_","?"];
 var numbers=["1","2","3","4","5","6","7","8","9"];
 
+function test(question){
+  let answer=prompt("Are you a grader? Yes or No");
+  if(answer.toLowerCase() === "yes"){
+    alert("Welcome Grader. Feel free to type no in this prompt when you refresh it for a small easter egg. But feel free to continue checking the code.")
+    return true;
+  } else if (answer.toLowerCase() === "no"){
+    alert("You were trying to cross the border, right? Walked right into that Imperial ambush, same as us, and that thief over there! (Skyrim Reference)")
+    return false;
+  } else{
+    alert("Invalid Answer");
+    return(question);
+  }
+}
+test();
+
+
 function generatePassword(){
   choice=[];
   lengthofpassword = parseInt(prompt("Choose between 8-25")); //Length of numbers
   if(isNaN(lengthofpassword) || lengthofpassword < 8 || lengthofpassword > 25){
   alert("It has to be 8-25 numbers");
-  return false;
+  return "Try Again and enter 8-25";
 }
 console.log(lengthofpassword)
 if(confirm("Lowercase in password?")){
