@@ -30,7 +30,6 @@ function generatePassword(){
   alert("It has to be 8-25 numbers");
   return "Try Again and enter 8-25";
 }
-console.log(lengthofpassword)
 if(confirm("Lowercase in password?")){
   choice = choice.concat(lowercase);
 }
@@ -43,14 +42,18 @@ if(confirm("Special in password?")){
 if(confirm("Numbers in password?")){
   choice = choice.concat(numbers);
 }
-console.log(choice)
+
 let password = " ";
- for(let i =0;i<lengthofpassword;i++){
-     var random = Math.floor(Math.random() * choice.length);
-    //  console.log(random)
-    //  console.log(choice[random])
-     password +=choice[random];
+ if(choice.length>0){ 
+  for(let i =0;i<lengthofpassword;i++){
+    var random = Math.floor(Math.random() * choice.length);
+   //  console.log(random)
+   //  console.log(choice[random])
+    password +=choice[random];
 }
+ } else {
+  password = "You have generated no password. You chose no options.";
+ }
 // console.log(password)
  return password;
 }
