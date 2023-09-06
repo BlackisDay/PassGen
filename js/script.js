@@ -19,7 +19,7 @@ function generatePassword(){
 
 function popup(){
   lengthofpassword.length = parseInt(prompt("Choose between 8-25")); //Length of numbers
-  if(isNaN)(characterLength) || characterLength < 8 || characterLength > 25
+  if(isNaN(lengthofpassword) || lengthofpassword < 8 || lengthofpassword > 25){
   alert("It has to be 8-25 numbers");
   return false;
 }
@@ -27,7 +27,18 @@ function popup(){
 if(confirm("Lowercase in password")){
   choice = choice.concat(lowercase);
 }
+if(confirm("Uppercase in password")){
+  choice = choice.concat(uppercase);
+}
+if(confirm("Special in password")){
+  choice = choice.concat(special);
+}
+if(confirm("Numbers in password")){
+  choice = choice.concat(numbers);
+}
 
+return true;
+}
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate"); //Reference
 
