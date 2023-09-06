@@ -18,10 +18,18 @@ function generatePassword(){
 
 
 function popup(){
-  lengthofpassword.length = parseInt(prompt("Choose between 8-25"))
+  lengthofpassword.length = parseInt(prompt("Choose between 8-25")); //Length of numbers
+  if(isNaN)(characterLength) || characterLength < 8 || characterLength > 25
+  alert("It has to be 8-25 numbers");
+  return false;
 }
+
+if(confirm("Lowercase in password")){
+  choice = choice.concat(lowercase);
+}
+
 // Get references to the #generate element
-var generateBtn = document.querySelector("#generate");
+var generateBtn = document.querySelector("#generate"); //Reference
 
 // Write password to the #password input
 function writePassword() {
