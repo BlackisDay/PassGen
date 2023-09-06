@@ -118,15 +118,6 @@ button[disabled] {
   overflow: hidden;
 }
 
-section.options{
-  display:inline-block;
-  position:relative;
-  left:25%;
-  bottom:50%;
-  color:black;
-}
-
-
 @media (max-width: 690px) {
   .btn {
     font-size: 1rem;
@@ -142,17 +133,5 @@ section.options{
 @media (max-width: 500px) {
   .btn {
     font-size: 0.8rem;
-  }
-  .options{
-    position:absolute;
-    width:50%;
-    height:50%;
-    font-size:50%;
-    left:-10%;
-    bottom:-60%;
-    
-  }
-  .option1{
-    left:145px;
   }
 }
