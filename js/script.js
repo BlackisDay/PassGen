@@ -6,45 +6,47 @@ var uppercase = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P"
 var lowercase= ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
 var special=["!","@","#","$","*","$","&","_","?"];
 var numbers=["1","2","3","4","5","6","7","8","9"];
-function generatePassword() {
-  console.log("test");
-
-  return "Working";
-}
 
 function generatePassword(){
-
-}
-
-
-function popup(){
-  lengthofpassword.length = parseInt(prompt("Choose between 8-25")); //Length of numbers
+  choice=[];
+  lengthofpassword = parseInt(prompt("Choose between 8-25")); //Length of numbers
   if(isNaN(lengthofpassword) || lengthofpassword < 8 || lengthofpassword > 25){
   alert("It has to be 8-25 numbers");
   return false;
 }
-
-if(confirm("Lowercase in password")){
+console.log(lengthofpassword)
+if(confirm("Lowercase in password?")){
   choice = choice.concat(lowercase);
 }
-if(confirm("Uppercase in password")){
+if(confirm("Uppercase in password?")){
   choice = choice.concat(uppercase);
 }
-if(confirm("Special in password")){
+if(confirm("Special in password?")){
   choice = choice.concat(special);
 }
-if(confirm("Numbers in password")){
+if(confirm("Numbers in password?")){
   choice = choice.concat(numbers);
 }
-
-return true;
+console.log(choice)
+let password = " ";
+ for(let i =0;i<lengthofpassword;i++){
+     var random = Math.floor(Math.random() * choice.length);
+    //  console.log(random)
+    //  console.log(choice[random])
+     password +=choice[random];
+}
+// console.log(password)
+ return password;
 }
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate"); //Reference
 
 // Write password to the #password input
 function writePassword() {
+
+    
   var password = generatePassword();
+  
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
