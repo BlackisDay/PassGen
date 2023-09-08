@@ -25,10 +25,10 @@ test();
 
 function generatePassword(){
   choice=[];
-  lengthofpassword = parseInt(prompt("Choose between 8-25")); //Length of numbers
-  if(isNaN(lengthofpassword) || lengthofpassword < 8 || lengthofpassword > 25){
-  alert("It has to be 8-25 numbers");
-  return "Try Again and enter 8-25";
+  lengthofpassword = parseInt(prompt("Choose between 8-128")); //Length of numbers
+  if(isNaN(lengthofpassword) || lengthofpassword < 8 || lengthofpassword > 128){
+  alert("It has to be 8-128 numbers");
+  return "Try Again and enter 8-128";
 }
 if(confirm("Lowercase in password?")){
   choice = choice.concat(lowercase);
